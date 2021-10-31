@@ -3,13 +3,13 @@
 1. Make use of installation steps first
 2. Run
 
-``
+```
     ./setup-local-cluster.sh   
     kubectl apply -f test-deployment.yaml  
     curl https://localhost/foo  
     # If you add foo.dev to your /etc/hosts under 127.0.0.1 then you can do:  
     curl https://foo.dev  
-``
+```
 
 ## Installation for Linux/macOS/Windows
 
