@@ -1,3 +1,16 @@
+## Running your own local cluster
+
+1. Make use of installation steps first
+2. Run
+
+``
+    ./setup-local-cluster.sh
+    kubectl apply -f test-deployment.yaml
+    curl https://localhost/foo
+    # If you add foo.dev to your /etc/hosts under 127.0.0.1 then you can do:
+    curl https://foo.dev
+``
+
 ## Installation for Linux/macOS/Windows
 
 ``Important! Before installing, upgrade your local docker to newest version``
@@ -114,7 +127,7 @@
     sudo cp mkcert-v1.4.3-linux-amd64 /usr/local/bin/mkcert
     sudo chmod +x /usr/local/bin/mkcert
     mkcert -install
-    mkcert -key-file=key.pem -cert-file=cert.pem dev '*.dev' localhost 127.0.0.1 ::1
+    mkcert -key-file=key.pem -cert-file=cert.pem dev foo.dev bar.dev localhost
 ```
 
 **On macOS via Homebrew:**
@@ -123,7 +136,7 @@
    brew install mkcert 
    brew install nss # if you use Firefox
    mkcert -install
-   mkcert -key-file=key.pem -cert-file=cert.pem development.unifonic.dev '*.development.unifonic.dev' localhost 127.0.0.1 ::1
+   mkcert -key-file=key.pem -cert-file=cert.pem dev *.dev localhost
 ```
 
 **On Windows:**
@@ -131,7 +144,7 @@
 ```
    choco install mkcert
    mkcert -install
-   mkcert -key-file=key.pem -cert-file=cert.pem development.unifonic.dev '*.development.unifonic.dev' localhost 127.0.0.1 ::1
+   mkcert -key-file=key.pem -cert-file=cert.pem dev '*.dev' localhost
 ```
 
 ### 5. Create Cluster and Registry

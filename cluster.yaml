@@ -15,10 +15,10 @@ kindV1Alpha4Cluster:
             kubeletExtraArgs:
               node-labels: "ingress-ready=true"
       # https://kind.sigs.k8s.io/docs/user/configuration/#extra-port-mappings
-#      extraPortMappings:
-#        - containerPort: 80
-#          hostPort: 80
-#          protocol: TCP
-#        - containerPort: 443
-#          hostPort: 443
-#          protocol: TCP
+      extraPortMappings:
+        - containerPort: 80
+          hostPort: 80
+          protocol: TCP
+        - containerPort: 443
+          hostPort: 443
+          protocol: TCP
