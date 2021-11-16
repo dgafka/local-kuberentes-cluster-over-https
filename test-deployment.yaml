@@ -53,9 +53,8 @@ metadata:
 spec:
   tls:
     - hosts:
-        - foo.dev
-        - bar.dev
-        - localhost
+        - foo.local.dev
+        - bar.local.dev
       secretName: tls-local-dev
   rules:
     - host: "foo.local.dev"
