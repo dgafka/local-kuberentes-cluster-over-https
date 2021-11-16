@@ -118,7 +118,7 @@
    choco install kubernetes-helm
 ```
 
-### 5. Install [mkcert](https://github.com/FiloSottile/mkcert) to generate trusted local certificates
+### 5. If you want to run your application over https, install [mkcert](https://github.com/FiloSottile/mkcert) to generate trusted local certificates
 
 **On Linux**
 
@@ -128,7 +128,7 @@
     sudo cp mkcert-v1.4.3-linux-amd64 /usr/local/bin/mkcert
     sudo chmod +x /usr/local/bin/mkcert
     mkcert -install
-    mkcert -key-file=key.pem -cert-file=cert.pem dev foo.dev bar.dev localhost
+    mkcert -key-file=key.pem -cert-file=cert.pem '*.local.dev' 
 ```
 
 **On macOS via Homebrew:**
@@ -137,7 +137,7 @@
    brew install mkcert 
    brew install nss # if you use Firefox
    mkcert -install
-   mkcert -key-file=key.pem -cert-file=cert.pem dev *.dev localhost
+   mkcert -key-file=key.pem -cert-file=cert.pem '*.local.dev' 
 ```
 
 **On Windows:**
@@ -145,7 +145,7 @@
 ```
    choco install mkcert
    mkcert -install
-   mkcert -key-file=key.pem -cert-file=cert.pem dev '*.dev' localhost
+   mkcert -key-file=key.pem -cert-file=cert.pem '*.local.dev' 
 ```
 
 ### 5. Create Cluster and Registry
