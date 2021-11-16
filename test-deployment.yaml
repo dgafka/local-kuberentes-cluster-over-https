@@ -75,7 +75,7 @@ spec:
                 name: bar-service
                 port:
                   number: 5678
-    - host: "foo.dev"
+    - host: "foo.local.dev"
       http:
         paths:
           - pathType: Prefix
@@ -85,7 +85,7 @@ spec:
                 name: foo-service
                 port:
                   number: 5678
-    - host: "bar.dev"
+    - host: "bar.local.dev"
       http:
         paths:
           - pathType: Prefix
