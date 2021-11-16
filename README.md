@@ -118,7 +118,7 @@
    choco install kubernetes-helm
 ```
 
-### 5. If you want to run your application over https, install [mkcert](https://github.com/FiloSottile/mkcert) to generate trusted local certificates
+### 5. Install [mkcert](https://github.com/FiloSottile/mkcert) to generate trusted local certificates
 
 **On Linux**
 
@@ -152,4 +152,18 @@
 
 ```
 ./setup-local-cluster.sh
+```
+
+### 6. Test out the cluster
+
+```
+Add foo.local.dev and bar.local.dev to your host file (/etc/hosts) for your docker IP address (linux 127.0.0.1)
+kubectl apply -f test-deployment.yaml
+You should be able to access foo.local.dev and bar.local.dev now
+```
+
+### 7. Delete Cluster and Registry
+
+```
+./delete-local-cluster.sh
 ```

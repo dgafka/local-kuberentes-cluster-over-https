@@ -56,7 +56,7 @@ spec:
         - foo.dev
         - bar.dev
         - localhost
-      secretName: tls-development
+      secretName: tls-local-dev
   rules:
     - host: "localhost"
       http:
